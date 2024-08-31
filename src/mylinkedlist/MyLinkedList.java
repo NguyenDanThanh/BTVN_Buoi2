@@ -48,8 +48,6 @@ public class MyLinkedList {
         
         System.out.println("do dai la: "+length());
         
-        System.out.println("xoa so dau ");
-        deleteFirst();
     }
 
     public int length(){
@@ -62,11 +60,6 @@ public class MyLinkedList {
         return count;
     }
 
-    public void deleteFirst(){
-        if(head!=null){
-            head = head.next;
-        }
-    }
     public static void main(String[] args) {
         MyLinkedList linkedList = new MyLinkedList();
         linkedList.addFirst(1);
