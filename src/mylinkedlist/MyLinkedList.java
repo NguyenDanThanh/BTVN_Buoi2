@@ -136,13 +136,28 @@ public class MyLinkedList {
     }
 
     public void sort(){
-        Node min = head; 
-        Node maxNode = min.next;
-        for (int i = 0; i < length()-1; i++) {
-            if(search(min.getData())==true){
-                min = maxNode;
-            }
+        if(head == null){
+            return;
         }
+        Node min = head;
+
+        while(min != null) {
+            Node minNode = min; 
+            Node maxNode = min.next;
+
+            while(maxNode != null){
+            if(maxNode.data < minNode.data){
+                minNode = maxNode;
+            }
+            maxNode = maxNode.next;
+        }
+        int max = min.data;
+        min.data = minNode.data;
+        minNode.data = max;
+
+        min = min.next;
+    }
+        
     }
         
     
