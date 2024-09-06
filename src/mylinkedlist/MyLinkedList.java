@@ -151,11 +151,15 @@ public class MyLinkedList {
         if(index < 0 || index >= length())
             return null;
         Node temp = head;
-        for (int i = 0; i <= index; i++) {
+        for (int i = 0; i <= index; i++) { 
             temp = temp.next;
         }
         return temp;
     }
+    // ví dụ list Node là 1>2>3>4 
+    // cho index = 2
+    // nếu i<index thì temp sẽ = 2
+    // nếu i<=index thì temp sẽ =3
 
     public static void main(String[] args) {
         MyLinkedList linkedList = new MyLinkedList();
